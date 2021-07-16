@@ -39,6 +39,9 @@ while(pedaco != NULL){
 if (substring != NULL){
   tam =strlen(pedaco);
   pedaco[tam]= '\0';
+  if(pedaco[tam+1] == '\n'){
+      pedaco[tam+1] ='\0';
+  }
   printf("%s\n", pedaco);
   
 }
