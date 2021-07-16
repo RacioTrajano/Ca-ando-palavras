@@ -5,25 +5,7 @@
 #define TAM_PALAVRA 50
 #define PALAVRA_CHAVE 200
 
-// função para ordenar a matriz com as palavras com substring
-void ordena_palavra(int linhas, int colunas, char matriz[linhas][colunas]){
-int compara;
-char menor[50];
-  for (int i =0; i< linhas; i++){
-    for(int j=i+1; j<=linhas; j++){
-      compara= strcmp(matriz[i],matriz[j]);
-      if(compara<0){
-        for(int k = 0; k< TAM_PALAVRA; k++){
-          menor[i]= matriz[i][k];
-        }
-      }
-    }
-    printf("%s", menor);
 
-  }
-
-
-}
 
 int main () {
 
@@ -57,17 +39,15 @@ while(pedaco != NULL){
 if (substring != NULL){
   tam =strlen(pedaco);
   pedaco[tam]= '\0';
-  for(int i=0; i<tam; i++){
-    matriz_palavra[cont][i]= pedaco[i];
-  }
-  cont++;
+  printf("%s\n", pedaco);
+  
 }
   pedaco = strtok(NULL, " ");
 
 }
 }
 
-ordena_palavra(cont, 50, matriz_palavra);
+
 
   return 0;
 }
